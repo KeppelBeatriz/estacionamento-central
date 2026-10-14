@@ -2,8 +2,7 @@
 
 **Sistema web de gestão de estacionamento - projeto em fase de análise e prototipação.**
 
-> Projeto de portfólio de desenvolvimento de software, elaborado a partir do levantamento de requisitos de um estabelecimento real, o **Estacionamento Central**, localizado em Itatiaiuçu, Minas Gerais. Os nomes **José** (responsável pela administração do estacionamento) e **Marcos** (proprietário do lote) são pseudônimos utilizados na documentação para preservar a identidade dos envolvidos.
-
+> Projeto de portfólio de desenvolvimento de software, elaborado a partir do levantamento de requisitos de um estabelecimento real, o **Estacionamento Central**, localizado em Itatiaiuçu, Minas Gerais. Os nomes **José** (responsável pela administração do estacionamento) e **Marcos** (proprietário do lote) são pseudônimos utilizados na documentação.
 ## Contexto
 
 O projeto **Estacionamento Central** tem como objetivo desenvolver uma solução web para modernizar a gestão de um estacionamento real de pequeno porte, atualmente administrado por meio de registros manuais em papel.
