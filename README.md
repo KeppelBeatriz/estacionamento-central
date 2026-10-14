@@ -2,82 +2,65 @@
 
 **Sistema web de gestão de estacionamento — projeto em fase de análise e prototipação.**
 
-> Projeto de portfólio de desenvolvimento de software, elaborado a partir do levantamento de necessidades de um estacionamento de pequeno porte. Os nomes **José** (operador) e **Marcos** (proprietário do lote) são fictícios.
+> Projeto de portfólio elaborado a partir de necessidades de um **estabelecimento real**, o Estacionamento Central, em **Itatiaiuçu, Minas Gerais**. **José** (operador) e **Marcos** (proprietário do lote) são pseudônimos para preservar a identidade das pessoas envolvidas.
 
-## Visão geral
+## Contexto
 
-O Estacionamento Central busca substituir registros manuais em papel por uma aplicação simples para gerenciar vagas, mensalistas, horistas, diaristas, cobranças e prestação de contas. A experiência deve atender a um operador com pouca familiaridade com computadores e celulares.
-
-### Problema
-
-A operação manual dificulta localizar informações, acompanhar pagamentos atrasados, identificar vagas disponíveis e consolidar o fechamento mensal.
-
-### Solução proposta
-
-Uma **aplicação web responsiva**, com interface minimalista e legível, que centraliza as operações diárias e automatiza cálculos e relatórios. O funcionamento offline com sincronização posterior é um requisito identificado, ainda não implementado.
+O estabelecimento utiliza registros manuais em papel para organizar vagas, mensalistas, horistas, diaristas e a prestação de contas. A proposta é criar uma aplicação web responsiva, simples e legível, adequada a um operador com pouca familiaridade digital.
 
 ## Funcionalidades planejadas
 
-- Cadastro e consulta de clientes mensalistas, com CPF, telefone e histórico.
-- Vínculo de mensalistas a **vagas fixas** de categorias distintas.
-- Gestão de vagas reservadas para mensalistas e vagas destinadas a uso avulso.
-- Registro de entrada e saída de horistas e cálculo por frações de 30 minutos.
-- Registro de diaristas com pagamento antecipado.
+- Cadastro de mensalistas e vínculo com vagas fixas.
+- Separação entre vagas de mensalistas e vagas para horistas/diaristas.
+- Entrada e saída de horistas, com cálculo por frações de 30 minutos.
+- Registro de diárias com pagamento antecipado.
 - Geração de mensalidades, acompanhamento de vencimentos e registro de pagamentos.
-- Fechamento mensal e prestação de contas com divisão financeira entre operador e proprietário do lote.
-- Exportação de relatórios em PDF, Excel e formato para impressão.
-- Login por CNPJ e PIN de seis dígitos, com proteções adicionais a definir.
+- Tarifas **configuráveis para todas as modalidades**, com histórico de reajustes.
+- Fechamento financeiro, registro de repasses e relatórios PDF/Excel/impressão.
+- Operação offline com sincronização posterior (**requisito; não implementado**).
+- Autenticação (**método ainda não definido**).
 
-## Regras de cobrança identificadas
+## Regras de cobrança
 
-| Modalidade | Regra |
+| Modalidade | Regra identificada |
 | --- | --- |
-| Mensalista A | Vaga fixa em box coberto; referência de R$ 150/mês, valor vigente a confirmar |
-| Mensalista B | Vaga fixa sob cobertura de placas solares; referência de R$ 100/mês |
-| Horista | R$ 5/hora, arredondando para cima em frações de 30 minutos |
-| Diarista | R$ 28/diária; duração exata a confirmar |
+| Mensalista A | Vaga fixa em box coberto; tarifa configurável |
+| Mensalista B | Vaga fixa sob cobertura de placas solares; tarifa configurável |
+| Horista | Tarifa atual R$ 5/h, cobrada em frações iniciadas de 30 minutos; tarifa configurável |
+| Diarista | Tarifa atual R$ 28/diária, configurável; duração da diária pendente de confirmação |
 
-Mensalistas pagam antes do vencimento combinado; diaristas pagam antecipadamente. Vagas destinadas a mensalistas **não** podem ser utilizadas por horistas ou diaristas, mesmo quando não há contrato ativo.
+Mensalistas pagam **até a data de vencimento combinada**; diaristas pagam antecipadamente. Vagas destinadas a mensalistas **não** podem ser usadas por horistas ou diaristas, mesmo sem contrato ativo. O momento do pagamento de horistas ainda não foi confirmado.
+
+**Reajustes:** o valor de cada cobrança deve ser preservado por competência. Exemplo: outubro R$ 150 e novembro R$ 170, sem alterar outubro.
 
 ## Prestação de contas
 
-O operador (José) presta contas mensalmente ao proprietário do lote (Marcos). A regra informada é repassar **50% do valor previsto** das modalidades mensalistas A/B e horistas, inclusive quando houver inadimplência. A inclusão e a base de cálculo das diárias, bem como o tratamento de recebimentos tardios, precisam de validação para evitar inconsistências. O repasse é feito por PIX e deve ser registrado.
+O operador presta contas mensalmente ao proprietário do lote. A regra informada é o repasse de **50% do valor previsto** das mensalidades A/B e horistas, inclusive em caso de inadimplência. A inclusão de diárias, a definição da base prevista dos avulsos e a conciliação de pagamentos atrasados permanecem **pendentes de validação**. Os repasses são realizados por PIX e devem ser registrados.
 
-## Status do projeto
+## Status
 
-**Em andamento — levantamento inicial concluído, com pendências de validação.** Não há implementação, protótipo final, banco de dados ou integrações concluídas nesta versão da documentação.
-
-| Etapa | Status |
+| Etapa | Estado |
 | --- | --- |
-| Entrevistas e levantamento inicial | Concluído com pendências |
-| Especificação de requisitos | Versão inicial |
-| Modelagem de dados | Proposta preliminar |
-| Fluxos e arquitetura de telas | Proposta preliminar |
-| Protótipo de alta fidelidade | Não iniciado |
-| Desenvolvimento e testes | Não iniciado |
+| Levantamento inicial | Concluído com pendências |
+| Requisitos e regras de negócio | Especificação inicial |
+| Modelagem e processos | Propostas preliminares |
+| Interface e arquitetura | Em definição |
+| Implementação e testes | Não iniciados |
 
 ## Documentação
 
-- [Requisitos e regras de negócio](docs/REQUISITOS.md)
-- [Modelagem preliminar de dados](docs/MODELAGEM.md)
-- [Fluxos e mapa de telas](docs/FLUXOS.md)
-- [Pendências e decisões em aberto](docs/PENDENCIAS.md)
+Consulte o [índice completo da documentação](docs/README.md).
 
 ## Tecnologias
 
-**A definir.** Requisitos técnicos identificados: aplicação web responsiva, autenticação, armazenamento persistente, operação offline e sincronização posterior. Nenhum framework ou banco de dados foi selecionado formalmente.
+**A definir.** O produto deverá ser web responsivo, com armazenamento persistente e sincronização offline. Não há framework, banco de dados nem método de login formalmente selecionado.
 
-## Princípios de UX
+## Diretrizes de UX
 
-- Botões grandes, rótulos claros e boa legibilidade.
-- Poucas etapas por tarefa; mensagens diretas e confirmação de ações críticas.
-- Indicação de status por **texto e cor**, não somente por cor.
-- Interface consistente entre celular e computador.
+Botões amplos, textos claros, bom contraste, poucas etapas e indicadores de situação por texto e cor. A tela inicial e a navegação ainda serão validadas com o operador.
 
-## Próximas etapas
+## Próximos passos
 
-Validar pendências de cobrança e operação; elaborar wireframes; testar os fluxos com o usuário; escolher a stack; implementar um MVP e documentar os testes.
+Validar pendências de cobrança e capacidade; produzir wireframes; testar fluxos com o usuário; escolher a stack; implementar e testar um MVP.
 
----
-
-**Nota de privacidade:** este repositório não deve conter CPFs, telefones, dados bancários ou registros reais de clientes. Exemplos e capturas devem usar dados fictícios.
+> Esta documentação descreve necessidades e propostas. **Não representa funcionalidades já implementadas.**

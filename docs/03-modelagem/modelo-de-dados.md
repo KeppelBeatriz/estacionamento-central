@@ -6,8 +6,8 @@
 
 | Entidade | Campos principais | Observações |
 | --- | --- | --- |
-| Estacionamento | id, cnpj, nome | Identificação da operação; dados sensíveis protegidos |
-| Operador | id, estacionamento_id, identificador, credencial_hash | Não armazenar PIN em texto puro |
+| Estacionamento | id, nome, identificador_fiscal_opcional | Identificação da operação; dados sensíveis protegidos |
+| Operador | id, estacionamento_id, identificador, credencial_hash | Não armazenar credenciais em texto puro; método de login ainda não definido |
 | Cliente | id, nome, cpf, telefone, observacoes, criado_em, ativo | CPF deve ser protegido e validado |
 | Vaga | id, codigo, uso_permitido, cobertura, categoria_preco, ativa | Uso mensalista ou avulso |
 | ContratoMensal | id, cliente_id, vaga_id, modalidade, valor, dia_vencimento, inicio, fim, status | Uma vaga não pode ter contratos ativos conflitantes |
@@ -16,6 +16,7 @@
 | Permanencia | id, vaga_id, modalidade_avulsa, placa, entrada_em, saida_em, valor_calculado, status | Horista ou diarista; duração da diária pendente |
 | Fechamento | id, competencia, previsto, recebido, pendente, valor_marcos, status, fechado_em | Cálculos devem ser rastreáveis |
 | Repasse | id, fechamento_id, valor, data, meio, referencia | PIX como meio confirmado |
+| TarifaHistorico | id, modalidade, valor, vigencia_inicio, vigencia_fim?, criado_em | Tarifas de todas as modalidades com histórico e vigência |
 | Auditoria | id, entidade, registro_id, acao, antes, depois, realizado_em, operador_id | Cuidados com dados pessoais no log |
 
 ## Relacionamentos previstos
@@ -45,3 +46,7 @@
 ## Decisões técnicas pendentes
 
 Banco de dados, backend, frontend, infraestrutura, política de backup, sincronização offline, autenticação e estratégia de conflitos ainda não foram escolhidos.
+
+## Observação sobre preços
+
+Guardar **valor aplicado** na cobrança/permanência, além da tarifa histórica utilizada, para que reajustes futuros não alterem competências passadas.

@@ -27,7 +27,7 @@ Este documento impede que hipóteses sejam confundidas com decisões do cliente.
 ## Interface e tecnologia
 
 - [ ] Escolher modelo de tela inicial e navegação.
-- [ ] Definir recuperação de acesso e proteção do PIN.
+- [ ] Definir método de autenticação, recuperação de acesso e proteção de credenciais.
 - [ ] Definir backup e recuperação de dados.
 - [ ] Definir se dados históricos em papel serão digitados manualmente.
 - [ ] Escolher stack web e arquitetura offline/sincronização.
@@ -44,3 +44,5 @@ Este documento impede que hipóteses sejam confundidas com decisões do cliente.
 | 2026-10-14 | Mensalistas pagam antes do vencimento combinado | Confirmada |
 | 2026-10-14 | Vagas mensalistas não são utilizadas por avulsos | Confirmada |
 | 2026-10-14 | Tela inicial permanece em aberto | Pendente |
+
+- [ ] Confirmar se o reajuste geral por modalidade afeta todos os contratos ativos na mesma data.

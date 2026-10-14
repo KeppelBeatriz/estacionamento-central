@@ -1,31 +1,4 @@
-# Fluxos do usuário e mapa de telas
-
-**Público principal:** José, operador com pouca familiaridade digital. O sistema deve priorizar linguagem simples, boa visibilidade e ações frequentes acessíveis em poucos passos.
-
-## Mapa de navegação proposto
-
-```mermaid
-flowchart TD
-    A[Login: CNPJ e PIN] --> B[Início]
-    B --> C[Vagas]
-    B --> D[Registrar vaga]
-    B --> E[Mensalistas]
-    B --> F[Horistas e diaristas]
-    B --> G[Pagamentos]
-    B --> H[Financeiro]
-    B --> I[Configurações]
-    D --> J{Modalidade?}
-    J --> K[Mensalista]
-    J --> L[Horista]
-    J --> M[Diarista]
-    K --> N[Selecionar vaga elegível]
-    L --> N
-    M --> N
-    N --> O[Preencher dados e confirmar]
-    H --> P[Fechamento e prestação de contas]
-```
-
-> **A tela inicial ainda não foi escolhida.** Alternativas em avaliação: lista de vagas em destaque, painel misto ou ações rápidas em destaque. O menu também não está definido.
+# Processos operacionais
 
 ## Fluxo 1 — Cadastrar mensalista
 
@@ -74,16 +47,3 @@ flowchart TD
 4. José registra o repasse por PIX.
 5. Exporta PDF, Excel ou versão para impressão.
 6. Correções posteriores exigem trilha de auditoria.
-
-## Diretrizes de interface
-
-- Texto legível, contraste adequado, campos e botões amplos.
-- Ações com verbos claros: **Registrar entrada**, **Registrar saída**, **Registrar pagamento**.
-- Mostrar estado da vaga por texto e cor.
-- Mensagens de confirmação e prevenção de operações duplicadas.
-- Preservar o contexto quando o usuário navega entre listas e formulários.
-- Indicar claramente quando o dispositivo estiver offline e quando houver sincronização pendente.
-
-## Protótipo
-
-Wireframes e telas de alta fidelidade ainda não foram finalizados. Capturas de tela serão adicionadas quando produzidas.
