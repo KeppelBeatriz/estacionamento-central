@@ -1,6 +1,6 @@
-# Estacionamento Central 🚗
+# Estacionamento Central 
 
-**Sistema web de gestão de estacionamento — projeto em fase de análise e prototipação.**
+**Sistema web de gestão de estacionamento - projeto em fase de análise e prototipação.**
 
 > Projeto de portfólio de desenvolvimento de software, elaborado a partir do levantamento de necessidades de um estacionamento de pequeno porte. Os nomes **José** (operador) e **Marcos** (proprietário do lote) são fictícios.
 
@@ -26,18 +26,24 @@ Uma **aplicação web responsiva**, com interface minimalista e legível, que ce
 - Geração de mensalidades, acompanhamento de vencimentos e registro de pagamentos.
 - Fechamento mensal e prestação de contas com divisão financeira entre operador e proprietário do lote.
 - Exportação de relatórios em PDF, Excel e formato para impressão.
-- Login por CNPJ e PIN de seis dígitos, com proteções adicionais a definir.
+- Login por CNPJ e PIN de seis dígitos, a definir.
 
 ## Regras de cobrança identificadas
 
 | Modalidade | Regra |
 | --- | --- |
-| Mensalista A | Vaga fixa em box coberto; referência de R$ 150/mês, valor vigente a confirmar |
-| Mensalista B | Vaga fixa sob cobertura de placas solares; referência de R$ 100/mês |
-| Horista | R$ 5/hora, arredondando para cima em frações de 30 minutos |
-| Diarista | R$ 28/diária; duração exata a confirmar |
+| Mensalista A | Vaga fixa em box coberto; mensalidade com valor configurável e possibilidade de reajuste. |
+| Mensalista B | Vaga fixa sob cobertura de placas solares; mensalidade com valor configurável e possibilidade de reajuste. |
+| Horista | Tarifa configurável por hora, com cobrança em frações iniciadas de 30 minutos. Valor atual: R$ 5,00/hora. |
+| Diarista | Tarifa diária configurável. Valor atual: R$ 28,00; duração da diária a confirmar. |
 
-Mensalistas pagam antes do vencimento combinado; diaristas pagam antecipadamente. Vagas destinadas a mensalistas **não** podem ser utilizadas por horistas ou diaristas, mesmo quando não há contrato ativo.
+### Regras de pagamento e utilização das vagas
+
+- **Mensalistas:** o pagamento da mensalidade deve ser realizado até a data de vencimento combinada com o cliente. Cada mensalista possui uma vaga fixa, vinculada ao seu contrato.
+- **Diaristas:** o pagamento deve ser realizado antecipadamente, antes do início da utilização da vaga.
+- **Horistas:** utilizam exclusivamente vagas destinadas ao estacionamento avulso. O momento de pagamento ainda precisa ser confirmado.
+- **Separação das vagas:** vagas destinadas aos mensalistas não podem ser utilizadas por horistas ou diaristas, mesmo quando não possuem contrato ativo.
+- **Disponibilidade:** horistas e diaristas somente podem utilizar vagas disponíveis para estacionamento avulso.
 
 ## Prestação de contas
 
@@ -79,5 +85,3 @@ O operador (José) presta contas mensalmente ao proprietário do lote (Marcos). 
 Validar pendências de cobrança e operação; elaborar wireframes; testar os fluxos com o usuário; escolher a stack; implementar um MVP e documentar os testes.
 
 ---
-
-**Nota de privacidade:** este repositório não deve conter CPFs, telefones, dados bancários ou registros reais de clientes. Exemplos e capturas devem usar dados fictícios.
