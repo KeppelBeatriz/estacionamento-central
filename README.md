@@ -1,12 +1,24 @@
-# Estacionamento Central 🚗
+# Estacionamento Central
 
-**Sistema web de gestão de estacionamento — projeto em fase de análise e prototipação.**
+**Sistema web de gestão de estacionamento - projeto em fase de análise e prototipação.**
 
-> Projeto de portfólio elaborado a partir de necessidades de um **estabelecimento real**, o Estacionamento Central, em **Itatiaiuçu, Minas Gerais**. **José** (operador) e **Marcos** (proprietário do lote) são pseudônimos para preservar a identidade das pessoas envolvidas.
+> Projeto de portfólio de desenvolvimento de software, elaborado a partir do levantamento de requisitos de um estabelecimento real, o **Estacionamento Central**, localizado em Itatiaiuçu, Minas Gerais. Os nomes **José** (responsável pela administração do estacionamento) e **Marcos** (proprietário do lote) são pseudônimos utilizados na documentação para preservar a identidade dos envolvidos.
 
 ## Contexto
 
-O estabelecimento utiliza registros manuais em papel para organizar vagas, mensalistas, horistas, diaristas e a prestação de contas. A proposta é criar uma aplicação web responsiva, simples e legível, adequada a um operador com pouca familiaridade digital.
+O projeto **Estacionamento Central** tem como objetivo desenvolver uma solução web para modernizar a gestão de um estacionamento real de pequeno porte, atualmente administrado por meio de registros manuais em papel.
+
+A aplicação busca centralizar o controle de vagas, mensalistas, horistas, diaristas, cobranças e prestação de contas, reduzindo tarefas manuais e facilitando o acompanhamento das operações.
+
+A experiência do usuário é uma das prioridades do projeto, considerando que o responsável pela operação possui pouca familiaridade com computadores e dispositivos móveis.
+
+### Problema
+
+A operação manual dificulta localizar informações, acompanhar pagamentos atrasados, identificar vagas disponíveis e consolidar o fechamento mensal.
+
+### Solução proposta
+
+Uma **aplicação web responsiva**, com interface minimalista e legível, que centraliza as operações diárias e automatiza cálculos e relatórios. O funcionamento offline com sincronização posterior é um requisito identificado, ainda não implementado.
 
 ## Funcionalidades planejadas
 
