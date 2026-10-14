@@ -1,12 +1,16 @@
-# Estacionamento Central 
+# Estacionamento Central
 
 **Sistema web de gestão de estacionamento - projeto em fase de análise e prototipação.**
 
-> Projeto de portfólio de desenvolvimento de software, elaborado a partir do levantamento de necessidades de um estacionamento de pequeno porte. Os nomes **José** (operador) e **Marcos** (proprietário do lote) são fictícios.
+> Projeto de portfólio de desenvolvimento de software, elaborado a partir do levantamento de requisitos de um estabelecimento real, o **Estacionamento Central**, localizado em Itatiaiuçu, Minas Gerais. Os nomes **José** (responsável pela administração do estacionamento) e **Marcos** (proprietário do lote) são pseudônimos utilizados na documentação para preservar a identidade dos envolvidos.
 
 ## Visão geral
 
-O Estacionamento Central busca substituir registros manuais em papel por uma aplicação simples para gerenciar vagas, mensalistas, horistas, diaristas, cobranças e prestação de contas. A experiência deve atender a um operador com pouca familiaridade com computadores e celulares.
+O projeto **Estacionamento Central** tem como objetivo desenvolver uma solução web para modernizar a gestão de um estacionamento real de pequeno porte, atualmente administrado por meio de registros manuais em papel.
+
+A aplicação busca centralizar o controle de vagas, mensalistas, horistas, diaristas, cobranças e prestação de contas, reduzindo tarefas manuais e facilitando o acompanhamento das operações.
+
+A experiência do usuário é uma das prioridades do projeto, considerando que o responsável pela operação possui pouca familiaridade com computadores e dispositivos móveis.
 
 ### Problema
 
