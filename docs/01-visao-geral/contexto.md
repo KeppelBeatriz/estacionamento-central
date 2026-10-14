@@ -1,10 +1,10 @@
 # Contexto e problema
 
-O **Estacionamento Central** é um estabelecimento real em **Itatiaiuçu, Minas Gerais**. Este projeto de portfólio parte de um levantamento de necessidades de sua operação, hoje baseada em registros manuais em papel.
+O **Estacionamento Central** é um estabelecimento real em **Itatiaiuçu, Minas Gerais**. Este projeto parte de um levantamento de necessidades de sua operação, hoje baseada em registros manuais em papel.
 
-O controle manual dificulta localizar contratos, consultar disponibilidade de vagas, acompanhar mensalidades e consolidar o fechamento mensal.
+O controle manual dificulta consultar disponibilidade de vagas, acompanhar mensalidades e consolidar o fechamento financeiro.
 
-**José** é um pseudônimo para o responsável operacional; **Marcos**, para o proprietário do lote. Ambos representam pessoas reais, mas seus nomes não são divulgados. Não publicar dados pessoais, documentos, telefones ou imagens identificáveis sem autorização.
+**José** é um pseudônimo para o responsável operacional; **Marcos**, para o proprietário do lote.
 
 ## Perfil de uso
 
